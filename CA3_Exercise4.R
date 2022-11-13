@@ -31,3 +31,7 @@ e <- y - X%*%beta
 sigma_sq <- 1/(length(y) - 4) * sum(e^2)
 sqrt(sigma_sq)
 
+
+model <- lm(y ~ ., data = df)
+model$coefficients
+sigma(model)
